@@ -108,11 +108,11 @@ function wp_cache_reset() {
 class APCu_Object_Cache {
 
 	private $prefix = '';
-	private $local_cache = array();
-	private $global_groups = array();
-	private $non_persistent_groups = array();
-	private $multisite = false;
-	private $blog_prefix = '';
+	public $local_cache = array();
+	public $global_groups = array();
+	public $non_persistent_groups = array();
+	public $multisite = false;
+	public $blog_prefix = '';
 
 	public function __construct() {
 		global $table_prefix, $blog_id;
